@@ -1,0 +1,38 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: api-gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      server:
+        discovery:
+          locator:
+            enabled: true
+            lower-case-service-id: true
+      mvc:
+        routes:
+          - id: payment-service
+            uri: lb://payment-service
+            predicates:
+              - Path=/payment-service/**
+            filters:
+              - StripPrefix=1
+          - id: mailing-service
+            uri: lb://mailing-service
+            predicates:
+              - Path=/mailing-service/**
+            filters:
+                - StripPrefix=1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+shared:
+  key: ${SHARED_INTERNAL_KEY}
