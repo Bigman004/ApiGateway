@@ -18,7 +18,7 @@ jobs:
       - name: Build Application
         run: mvn clean install -DSHARED_KEY=${{ secrets.SHARED_KEY }}
       - name: Build image
-        run: docker build -t api-gateway
+        run: docker build -t api-gateway .
       - name: tag image
         run: docker tag api-gateway bigman004/api-gateway:latest
       - name: login
