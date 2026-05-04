@@ -34,5 +34,9 @@ management:
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
+eureka:
+  client:
+    service-url:
+      defaultZone: https://discovery-server-icoo.onrender.com/
 shared:
-  key: ${SHARED_INTERNAL_KEY}
+  key: ${SHARED_KEY}
