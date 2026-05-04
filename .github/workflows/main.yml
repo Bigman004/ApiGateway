@@ -16,7 +16,7 @@ jobs:
           distribution: 'zulu'
           cache: maven
       - name: Build Application
-        run: mvn clean install
+        run: mvn clean install -DSHARED_KEY=${{ secrets.SHARED_KEY }}
       - name: Build image
         run: docker build -t api-gateway
       - name: tag image

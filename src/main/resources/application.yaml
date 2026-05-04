@@ -39,4 +39,4 @@ eureka:
     service-url:
       defaultZone: https://discovery-server-icoo.onrender.com/eureka
 shared:
-  key: {SHARED_KEY}
+  key: ${SHARED_KEY}
