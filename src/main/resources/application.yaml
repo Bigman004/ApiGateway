@@ -25,7 +25,7 @@ spring:
             predicates:
               - Path=/mailing-service/**
             filters:
-                - StripPrefix=1
+              - StripPrefix=1
 management:
   endpoints:
     web:
