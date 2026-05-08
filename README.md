@@ -72,9 +72,6 @@ Add these to your repository under **Settings → Secrets and variables → Acti
 |---|---|
 | `DOCKER_USERNAME` | Docker Hub username |
 | `DOCKER_PASSWORD` | Docker Hub password or access token |
-| `DEPLOY_HOST` | SSH host of the deployment server |
-| `DEPLOY_USER` | SSH username |
-| `DEPLOY_KEY` | Private SSH key for the deployment server |
 | `API_KEY` | The gateway API key injected at runtime |
 
 > Adjust secret names to match what is defined in your workflow `.yml` file.
