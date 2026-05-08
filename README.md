@@ -1,14 +1,4 @@
 ---
-
-## Routing
-
-| Path | Routes To |
-|---|---|
-| `/mail-service/**` | Mailing Service |
-| `/payment-service/**` | Payment Service |
-
-> Route prefixes may vary — check `application.yml` for the exact configuration.
-
 ---
 
 ## API Key
