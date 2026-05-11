@@ -25,6 +25,11 @@ public class SecurityFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         ModifiedRequest request1 = new ModifiedRequest(request);
+
+        String signature = request.getHeader("x-paystack-signature");
+        if(!(signature == null)){
+            request1.addHeader("x-paystack-signature", signature);
+        }
         String username = "user";
         String password = sharedKey;
         String credentials = username + ":" + password;
