@@ -37,6 +37,6 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: https://discovery-server-icoo.onrender.com/eureka
+      defaultZone: https://discovery-server-zi8p.onrender.com/eureka
 shared:
   key: ${SHARED_KEY}
